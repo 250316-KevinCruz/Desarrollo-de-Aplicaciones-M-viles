@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF1DE"
+    tools:context=".RegistroCliente">
+
+    <!-- Encabezado con Logo Circular -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/vet"
+                android:scaleType="centerCrop"
+                android:contentDescription="Logo Clínica" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clinica del Tio Randy"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#051F20"
+            android:layout_marginStart="14dp" />
+    </LinearLayout>
+
+    <!-- SECCIÓN: Clientes -->
+    <LinearLayout
+        android:id="@+id/sectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/cliente"
+            android:contentDescription="Icono Clientes" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Cliente"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0B2B26"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <!-- FORMULARIO CON SCROLL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/sectionLayout"
+        app:layout_constraintBottom_toTopOf="@id/btnGuardar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textPersonName"
+                android:textColor="#051F20"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textPersonName"
+                android:textColor="#051F20"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textPostalAddress"
+                android:textColor="#051F20"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:paddingHorizontal="12dp"
+                android:inputType="phone"
+                android:textColor="#051F20"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#051F20"
+                android:layout_marginBottom="6dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:text="Guardar Cliente"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:backgroundTint="#0B2B26"
+        app:cornerRadius="14dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- BARRA INFERIOR FIJA -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="#0B2B26"
+        android:elevation="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navClientes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cliente" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clientes"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pata" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/diagnostico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnóstico"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ajuste" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

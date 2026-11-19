@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF1DE"
+    tools:context=".ActualizarCliente">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:cardCornerRadius="23dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vet"
+                android:contentDescription="Logo Clínica" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Cliente"
+            android:textColor="#051F20"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="14dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toTopOf="@id/bottomBarDivider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="6dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="10dp"
+                android:textColor="#051F20"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="6dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="10dp"
+                android:textColor="#051F20"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="6dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:inputType="textPostalAddress"
+                android:paddingHorizontal="10dp"
+                android:textColor="#051F20"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="6dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:inputType="phone"
+                android:paddingHorizontal="10dp"
+                android:textColor="#051F20"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico:"
+                android:textColor="#051F20"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginBottom="16dp"
+                android:background="#FFFFFF"
+                android:elevation="1dp"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="10dp"
+                android:textColor="#051F20"
+                android:textSize="13sp" />
+
+            <!-- Botón Actualizar -->
+            <Button
+                android:id="@+id/btnActulizar"
+                android:layout_width="180dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#0B2B26"
+                app:cornerRadius="12dp"
+                android:text="Actualizar"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Línea divisora -->
+    <View
+        android:id="@+id/bottomBarDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#8EB69B"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#0B2B26"
+        android:orientation="horizontal"
+        android:paddingVertical="2dp"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/cliente" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clientes"
+                android:textColor="#DAF1DE"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/pata" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas"
+                android:textColor="#DAF1DE"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/diagnostico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnóstico"
+                android:textColor="#DAF1DE"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ajuste" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes"
+                android:textColor="#DAF1DE"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

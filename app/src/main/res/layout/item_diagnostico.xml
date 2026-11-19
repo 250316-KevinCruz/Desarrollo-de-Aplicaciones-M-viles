@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtNombreD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="Diagnostico de ...."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtTDiagnostico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Tipo de Diagnostico: Nose me ocurre nada"/>
+
+    <TextView
+        android:id="@+id/txtSintomasP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Los sintomas presentados son: exeso de gripa etc."/>
+
+    <TextView
+        android:id="@+id/txtTemperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Temperatura: 15ºC"/>
+
+    <TextView
+        android:id="@+id/txtPesoD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Peso: 15 kg"/>
+
+    <TextView
+        android:id="@+id/txtDMedico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Diagnostico Medico: El perro presenta resequedad en la garganta "/>
+
+    <TextView
+        android:id="@+id/txtNGravedad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Nivel de Gravedad: Leve o nulo"/>
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Fecha: 15/05/25"/>
+
+    <TextView
+        android:id="@+id/txtHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Hora: 17:00"/>
+
+    <TextView
+        android:id="@+id/txtETratamiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Estado de Tratamiento: Medicina"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#A22A2A"
+            android:drawableLeft="@android:drawable/ic_menu_delete"
+            android:text="Eliminar" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:shadowColor="@color/black"
+            android:text="Editar" />
+    </LinearLayout>
+</LinearLayout>

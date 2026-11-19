@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF1DE"
+    tools:context=".RecuperarContrasena">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="46dp"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Imagen de login"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/vet" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperar Contraseña"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#051F20"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblInstruccion"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Ingresa tu correo electrónico asociado y te enviaremos las instrucciones de recuperación."
+        android:textColor="#163832"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/lblTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lbLRecuperar"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Correo de recuperación:"
+        android:textColor="#051F20"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblInstruccion"/>
+
+    <EditText
+        android:id="@+id/txtRecuperar"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="#FFFFFF"
+        android:textColor="#051F20"
+        android:textColorHint="#8EB69B"
+        android:hint="ejemplo@correo.com"
+        android:paddingHorizontal="16dp"
+        android:elevation="2dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbLRecuperar" />
+
+    <Button
+        android:id="@+id/BtnRecuperarContrasena"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:text="Recuperar contraseña"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0B2B26"
+        app:cornerRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRecuperar"/>
+
+    <TextView
+        android:id="@+id/lblRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="← Regresar al inicio"
+        android:textColor="#163832"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BtnRecuperarContrasena"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

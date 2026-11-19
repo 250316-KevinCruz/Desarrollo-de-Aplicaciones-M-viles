@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtnombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="Randolfo"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtespecie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Especie: Canina"/>
+
+    <TextView
+        android:id="@+id/txtraza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Raza: Pastor Belga"/>
+
+    <TextView
+        android:id="@+id/txtfnacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Fecha de nacimiento: 15/09/2009"/>
+
+    <TextView
+        android:id="@+id/txtsexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Sexo: Macho"/>
+
+    <TextView
+        android:id="@+id/txtcolores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Color del Pelaje: Negro "/>
+
+    <TextView
+        android:id="@+id/txtchip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Numero de Chip: 250316"/>
+
+    <TextView
+        android:id="@+id/txtesterilizado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Esterilizado: Sí"/>
+
+    <TextView
+        android:id="@+id/txtid_mascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="ID de la Mascota: 250507"/>
+    <TextView
+        android:id="@+id/txtid_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="ID del cliente: 070525"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#A22A2A"
+            android:drawableLeft="@android:drawable/ic_menu_delete"
+            android:text="Eliminar" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:shadowColor="@color/black"
+            android:text="Editar" />
+    </LinearLayout>
+</LinearLayout>
+

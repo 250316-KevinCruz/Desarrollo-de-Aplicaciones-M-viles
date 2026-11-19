@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warm_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ConfigurationFragment">
+
+    <ImageView
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:contentDescription="Icono Configuración"
+        android:padding="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ajuste" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ajustes"
+        android:textColor="#051F20"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sección de ajustes y configuración del sistema"
+        android:textColor="#163832"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Cerrar Sesión"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:backgroundTint="#A22A2A"
+        app:cornerRadius="14dp" />
+</LinearLayout>

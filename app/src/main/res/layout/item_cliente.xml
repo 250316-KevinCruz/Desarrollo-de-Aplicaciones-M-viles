@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtNombreC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="Omar"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtApellidosC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Apellido Completo: Contla Garcia"/>
+
+    <TextView
+        android:id="@+id/txtDireccionC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Direccion: Priv de calle Mina 320"/>
+
+    <TextView
+        android:id="@+id/txtTelefonoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Telefono: 7641296069"/>
+
+    <TextView
+        android:id="@+id/txtCElectronicoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Correo electronico: dixbox@gmail.com"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#A22A2A"
+            android:drawableLeft="@android:drawable/ic_menu_delete"
+            android:text="Eliminar" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:shadowColor="@color/black"
+            android:text="Editar" />
+    </LinearLayout>
+</LinearLayout>

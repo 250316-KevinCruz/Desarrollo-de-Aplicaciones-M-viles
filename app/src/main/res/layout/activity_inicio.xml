@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF1DE"
+    tools:context=".Inicio">
+
+    <!-- Título de la Clínica -->
+    <TextView
+        android:id="@+id/tvTituloClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Clinica del Tio Randy"
+        android:textColor="#051F20"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtituloClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuidado y bienestar para tus mascotas"
+        android:textColor="#163832"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloClinica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ilustración Circular Vet -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardIlustracion"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        app:cardCornerRadius="120dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/btnIngresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtituloClinica"
+        app:layout_constraintVertical_bias="0.35">
+
+        <ImageView
+            android:id="@+id/ivIlustracion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Ilustración Veterinario"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vet" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón Ingresar -->
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="Ingresar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:backgroundTint="#0B2B26"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BARRA INFERIOR FIJA -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="#0B2B26"
+        android:elevation="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Opción Clientes -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cliente" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clientes"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Opción Mascotas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pata" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Opción Diagnostico -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/diagnostico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnóstico"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Opción Ajustes -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ajuste" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes"
+                android:textSize="11sp"
+                android:textColor="#DAF1DE"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

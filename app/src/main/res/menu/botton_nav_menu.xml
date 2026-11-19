@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_clientes"
+        android:icon="@drawable/cliente"
+        android:title="Clientes" />
+    <item
+        android:id="@+id/nav_mascotas"
+        android:icon="@drawable/pata"
+        android:title="Mascotas" />
+    <item
+        android:id="@+id/nav_diagnostico"
+        android:icon="@drawable/diagnostico"
+        android:title="Diagnóstico" />
+    <item
+        android:id="@+id/nav_ajustes"
+        android:icon="@drawable/ajuste"
+        android:title="Ajustes" />
+</menu>

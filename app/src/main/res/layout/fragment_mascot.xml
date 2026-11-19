@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warm_background"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MascotFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas"
+                android:textColor="#051F20"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Administra la información de las mascotas"
+                android:textColor="#163832"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNuevaMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Nueva"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:backgroundTint="#0B2B26"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+    <!-- Barra de Búsqueda -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/buscar"
+            android:contentDescription="Buscar" />
+
+        <EditText
+            android:id="@+id/etBuscarMascota"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Buscar por nombre, raza o chip..."
+            android:textColor="#051F20"
+            android:textColorHint="#8EB69B"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:inputType="text"
+            android:autofillHints="name" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMascota"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_mascota" />
+</LinearLayout>
